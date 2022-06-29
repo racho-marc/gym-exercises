@@ -12,13 +12,14 @@ const HeroBanner = () => {
         position="relative"
         p="20px"
     >
-        <Typography 
+        <Typography variant="span"
             color="primary" 
+            display="block"
             fontWeight="600" 
             fontSize="26px">
             Fitness Club
         </Typography>
-        <Typography 
+        <Typography variant="h1"
             fontWeight="700" 
             sx={{
                 fontSize: { lg: '44px', xs: '40px'}

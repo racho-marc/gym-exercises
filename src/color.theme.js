@@ -1,6 +1,9 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+const font = "'Josefin Sans', sans-serif";
 const theme = createTheme({
+  typography: {
+    fontFamily: font,
+  },
   palette: {
     primary: {
       light: '#f79494',
