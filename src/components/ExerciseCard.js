@@ -7,10 +7,10 @@ const ExerciseCard = ({exercise}) => {
     <Link className="exercise-card" to={`/exercise/${exercise.id}`}>
         <img src={exercise.gifUrl} alt={exercise.name} loading="lazy"/>
         <Stack direction="row">
-            <Button sx={{ ml: '21px', color: '#FFFFFF', background: '#ffa9a9', fontSize: '18px', borderRadius: '20px', textTransform:'capitalize', padding: '8px 12px'}}>
+            <Button sx={{ ml: '21px', color: '#000000', background: '#ffa9a9', fontSize: '18px', borderRadius: '20px', textTransform:'capitalize', padding: '8px 12px'}}>
                 {exercise.bodyPart}
             </Button>
-            <Button sx={{ ml: '21px', color: '#FFFFFF', background: '#fcc757', fontSize: '18px', borderRadius: '20px', textTransform:'capitalize', padding: '8px 12px'}}>
+            <Button sx={{ ml: '21px', color: '#000000', background: '#fcc757', fontSize: '18px', borderRadius: '20px', textTransform:'capitalize', padding: '8px 12px'}}>
                 {exercise.target}
             </Button>
         </Stack>
