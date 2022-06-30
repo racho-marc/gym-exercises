@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useCallback, useEffect, useState} from 'react';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 import HorizontalScrollbar from './HorizontalScrollbar';
@@ -9,11 +9,17 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
     
     const url = 'https://exercisedb.p.rapidapi.com/exercises';
 
+    const triggerSearch = useCallback((searchedExercises) => {        
+        setExercises(searchedExercises);
+    }, [])
+
+
     useEffect(() => {
       const fetchExercisesData = async () => {
         const bodyPartsData = await fetchData(`${url}/bodyPartList`, exerciseOptions);
         
         setBodyParts(['all', ...bodyPartsData]);
+        
       }
 
       fetchExercisesData();
@@ -33,7 +39,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
             );
 
             setSearch('');
-            setExercises(searchedExercises);
+            triggerSearch(searchedExercises);
         }
     }
 
