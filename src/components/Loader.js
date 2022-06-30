@@ -1,13 +1,12 @@
 import React from 'react';
-import { Stack } from '@mui/material';
-import { InfinitySpin } from 'react-loader-spinner';
+import { LoaderOverlay, LoaderContainer } from './Loader.styles';
 
 const Loader = () => {
   return (
-    <Stack direction="row" justifyContent="center" alignItem="center" width="100%">
-        <InfinitySpin color='gray' />
-    </Stack>
+    <LoaderOverlay>
+      <LoaderContainer />
+    </LoaderOverlay>
   )
 }
 
-export default Loader
+export default Loader;
